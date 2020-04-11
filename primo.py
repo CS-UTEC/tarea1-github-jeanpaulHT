@@ -1,11 +1,13 @@
-def is_palindrome(string):
-    for i in range(0, len(string)//2):
-        if(string[i] != string[len(string)-i-1]):
-            return False;
+def is_prime(num):
+    if num > 1:
+        for i in range(2, num//2):
+            if(num%i == 0):
+                return False;
     return True;
 
-string = input()
-if(is_palindrome(string)):
-    print("el texto es palindromo")
+num = int(input())
+
+if(is_prime(num)):
+    print("El numero es primo")
 else:
-    print("el texto no es palindromo")
+    print("el numero no es primo")
